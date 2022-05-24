@@ -16,7 +16,13 @@ const theme = {
 };
 
 const App = () => {
-  const [loaded] = useFonts({});
+  const [loaded] = useFonts({
+    JetBrainsMono: require("./assets/fonts/jet-brains-mono.ttf"),
+    IBMPlexSans: require("./assets/fonts/ibm-plex-sans.ttf"),
+  });
+
+  if (!loaded) return null;
+
   return (
     <NavigationContainer theme={theme}>
       <Stack.Navigator
