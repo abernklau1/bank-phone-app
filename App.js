@@ -2,7 +2,8 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 
-import Home from "./screens/Home";
+// Pages
+import Login from "./screens/Login";
 import About from "./screens/About";
 
 const Stack = createStackNavigator();
@@ -27,9 +28,9 @@ const App = () => {
     <NavigationContainer theme={theme}>
       <Stack.Navigator
         screenOptions={{ headerShown: false }}
-        initialRouteName="Home"
+        initialRouteName="Login"
       >
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Login" component={Login} />
 
         <Stack.Screen name="About" component={About} />
       </Stack.Navigator>
